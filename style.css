@@ -1,0 +1,111 @@
+body{padding: 0;
+margin: 0;}
+ /* BACKGROUND VIDEO */
+div #bgvid{width: 100%;
+  z-index: -1;
+}
+.vidbg{
+  position: relative;
+}
+.vidbg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 500px; /* Adjust this value to change the size of the shadow */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 0%,rgba(0,0,0,0.2)20%,rgba(0,0,0,0.6)50%,rgba(0,0,0,0.8)70%, rgba(0, 0, 0, 2) 100%);
+  z-index: 0;
+}
+/* NAVIGATION BAR */
+
+/* Create a top navigation bar with a black background color  */
+.topnav { margin-top: 0px;
+ 
+  position: absolute;
+  overflow: hidden;
+ width: 100%;
+ top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* display: flex;
+    justify-content: center; */
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+/* Change the color of links on hover */
+a:hover{
+  background-color: #ddd;
+  color: black;
+  text-decoration: underline;
+}
+
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+
+}
+.topnav a.split1 {
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+  margin-right: 1px;
+}
+
+
+.nbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease; /* Smooth transition */
+z-index: 1000;
+}
+
+
+
+ /* Your existing CSS styles */
+
+/* Centering the image */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  margin-left: 50%;
+  size: 10px;
+  
+}
+
+/* Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease forwards;
+}
+
+div #img{width: 80%;
+position: fixed;}
